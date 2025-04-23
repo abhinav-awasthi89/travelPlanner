@@ -1,0 +1,28 @@
+services:
+  - name: travelplanner-backend
+    type: web
+    env: docker
+    repo: https://github.com/abhinav-awasthi89/travelPlanner
+    region: oregon
+    plan: free
+    dockerfilePath: dockerfile
+    rootDir: .
+    envVars:
+      - key: PORT
+        value: 8000
+
+  - name: travelplanner-frontend
+    type: web
+    env: docker
+    repo: https://github.com/abhinav-awasthi89/travelPlanner
+    region: oregon
+    plan: free
+    dockerfilePath: dockerfile
+    rootDir: static
+    build:
+      args:
+        - key: API_URL
+          value: https://travelplanner-backend.onrender.com
+    envVars:
+      - key: PORT
+        value: 80

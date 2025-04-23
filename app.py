@@ -26,7 +26,7 @@ app.add_middleware(
 
 # Configure Groq
 model = ChatGroq(
-    api_key=os.getenv("GROQ_API_KEY"),
+    api_key=os.environ["GROQ_API_KEY"],
     model="llama3-70b-8192",
     temperature=0.7
 )
@@ -61,7 +61,7 @@ def get_flight_data(source, destination, start_date):
             "arrival_id": dest_code,
             "outbound_date": start_date, 
             "type": "2",  # Keep this since you confirmed it works
-            "api_key": os.getenv("SERP_API_KEY"),
+            "api_key": os.environ["SERP_API_KEY"],
             "currency": "USD",
             "hl": "en"
         }
