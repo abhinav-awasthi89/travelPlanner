@@ -47,7 +47,7 @@ class ChatRequest(BaseModel):
 
 @app.get("/")
 async def read_root():
-    return FileResponse("static/index.html")  # Update path to static folder
+    return FileResponse("staticFiles/index.html")  # Update path to static folder
 
 def get_flight_data(source, destination, start_date):
     try:
@@ -188,4 +188,4 @@ async def chat_with_plan(request: ChatRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 # Serve static files
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/staticFiles", StaticFiles(directory="staticFiles"), name="staticFiles")
