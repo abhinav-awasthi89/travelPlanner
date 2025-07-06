@@ -1,8 +1,9 @@
 
 # Travel Planning AI
 
-
 A full-stack AI-powered travel planning application that generates personalized travel itineraries based on user preferences. The application uses Groq's LLaMA 3 model for generating comprehensive travel plans and SerpAPI for fetching flight information.
+
+Try here [https://travelplanner-rl15.onrender.com/](https://travelplanner-rl15.onrender.com/)
 
 ## 🌟 Features
 
@@ -226,4 +227,4 @@ Marked.js for Markdown parsing
 All other open source libraries used in this project
 
 
-Created with ❤️ by [Your Name]
+Created with ❤️ by Abhinav Awasthi
